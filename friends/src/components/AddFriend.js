@@ -81,7 +81,9 @@ class AddFriend extends React.Component {
           />
           <br />
 
-          <button type="submit">Add Friend</button>
+          <button className="Add" type="submit">
+            Add Friend
+          </button>
         </form>
       </div>
     );
