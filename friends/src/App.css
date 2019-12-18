@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+.NavBar {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    height: 5vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NavBar nav {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.FriendContainer {
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.FriendCard {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    width: 20vw;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AddFriend {
+    margin: 0.5rem;
 }

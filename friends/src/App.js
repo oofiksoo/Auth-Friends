@@ -8,8 +8,8 @@ import FriendList from "./components/FriendList";
 function App() {
   return (
     <Router>
-      <div className="App-Main">
-        <div className="Nav-Bar">
+      <div className="AppMain">
+        <div className="NavBar">
           <nav>
             <Link to="/login">Login</Link>
           </nav>

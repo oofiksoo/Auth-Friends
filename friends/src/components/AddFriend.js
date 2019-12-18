@@ -49,39 +49,41 @@ class AddFriend extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Name: </label>
+      <div className="AddFriend">
+        <form onSubmit={this.handleSubmit}>
+          <label>Name: </label>
 
-        <input
-          type="text"
-          name="name"
-          onChange={this.handleChange}
-          value={this.state.name}
-        />
-        <br />
+          <input
+            type="text"
+            name="name"
+            onChange={this.handleChange}
+            value={this.state.name}
+          />
+          <br />
 
-        <label>Age: </label>
+          <label>Age: </label>
 
-        <input
-          type="text"
-          name="age"
-          onChange={this.handleChange}
-          value={this.state.age}
-        />
-        <br />
+          <input
+            type="text"
+            name="age"
+            onChange={this.handleChange}
+            value={this.state.age}
+          />
+          <br />
 
-        <label>Email: </label>
+          <label>Email: </label>
 
-        <input
-          type="text"
-          name="email"
-          onChange={this.handleChange}
-          value={this.state.email}
-        />
-        <br />
+          <input
+            type="text"
+            name="email"
+            onChange={this.handleChange}
+            value={this.state.email}
+          />
+          <br />
 
-        <button type="submit">Add Friend</button>
-      </form>
+          <button type="submit">Add Friend</button>
+        </form>
+      </div>
     );
   }
 }
