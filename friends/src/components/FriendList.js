@@ -2,6 +2,7 @@ import React from "react";
 import { axiosWithAuth } from "../utils/AxiosWithAuth";
 import Friend from "./Friend";
 import AddFriend from "./AddFriend";
+
 class FriendList extends React.Component {
   state = {
     friends: []
@@ -57,6 +58,9 @@ class FriendList extends React.Component {
   render() {
     return (
       <div className="FriendContainer">
+        <div className="Title">
+          <h1>They'll be there for you!</h1>
+        </div>
         {this.state.friends.map(friend => {
           return (
             <div className="FriendCard" key={friend.id}>
