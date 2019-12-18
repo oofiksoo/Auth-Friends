@@ -29,7 +29,7 @@ class Login extends React.Component {
       .post("/login", this.state.credentials)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
-        this.props.history.push("/protected");
+        this.props.history.push("/FriendList");
       })
       .catch(err => console.log(err));
   };
@@ -51,7 +51,7 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
           <button>Log in</button>
-          {this.state.isFetching && "logging in"}
+          {this.state.isFetching && "Please Wait"}
         </form>
       </div>
     );
