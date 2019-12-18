@@ -27,7 +27,17 @@ class FriendList extends React.Component {
         console.log(err);
       });
   };
-
+  removeFriend = id => {
+    axiosWithAuth()
+      .delete(`http://localhost:5000/api/friends/${id}`)
+      .then(res => {
+        console.log(res);
+        this.getData();
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
   addFriend = friend => {
     axiosWithAuth()
       .post(
@@ -48,7 +58,17 @@ class FriendList extends React.Component {
     return (
       <div className="FriendContainer">
         {this.state.friends.map(friend => {
-          return <Friend key={friend.id} data={friend} />;
+          return (
+            <div>
+              <Friend key={friend.id} data={friend} />
+              <button
+                className="Delete"
+                onClick={() => this.removeFriend(friend.id)}
+              >
+                Delete
+              </button>
+            </div>
+          );
         })}
         <AddFriend addFriend={this.addFriend} />
       </div>
