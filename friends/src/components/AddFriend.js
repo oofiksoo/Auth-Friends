@@ -80,7 +80,7 @@ class AddFriend extends React.Component {
           />
 
           <button className="Add" type="submit">
-            Add Friend
+            Add
           </button>
         </form>
       </div>
